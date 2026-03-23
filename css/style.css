@@ -1,14 +1,46 @@
 /*RESET E ESTILO BASE*/
 /*'0' é o seletor universal que aplica os estilos a TODOS os elementos da página*/
 *{/*begin*/
-    margin: 0; /*remove margens padrão que os navegadores adicional*/
-    padding: 0; /*remove espaçamentos internos padrão*/
-    box-sizing: border-box; /*faz com que o padding e border sejam incluídos na largura e altura total do elemento*/
+    margin: 0; 
+    /*remove margens padrão que os navegadores adicional*/
+    padding: 0; 
+    /*remove espaçamentos internos padrão*/
+    box-sizing: border-box; 
+    /*faz com que o padding e border sejam incluídos na largura e altura total do elemento*/
 }/*end*/
 body{
     /*Fontes: Segoe UI é a primeira opção se não tiver, vai tentando as próximas*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /*altura entre as linhas 1.6x o tamanho da fonte*/
-    color: #333; /*cor do texto 'cinza escuro'*/ 
-}
+    line-height: 1.6; 
+    /*altura entre as linhas 1.6x o tamanho da fonte*/
+    color: #0decc7; 
+    /*cor do texto 'cinza escuro'*/ 
+    /*gradient de fundo: 135deg é a direção, de roxo claro para roxo escuro*/
+    background: linear-gradient(135deg,#ff47c8 0%, #2a005a 100%);
+min-height: 100vh; /*vh=viewport height . Mínimo de 100% da altura da tela*/
 
+}
+/*===HEADER (cabeçalho) === */
+header{
+    background-color: rgba(255, 80, 246, 1.0);
+  /*branco  com 95% de opacidade*/
+ padding : 1rem 5%;/*rem= 1.6px (tamanho padrao da fonte),5% é a largura do container*/
+ display: flex;/*atva o flexbox para layout flexivel*/
+ align-items: center;/*alinha os itens verticalmente ao centro*/
+ justify-content: space-between;/*espaço entre os itens ( logo de um lado e menu do outro)*/
+ flex-wrap: wrap ;/*permite quebra de linhas em telas pequenas*/
+ gap: 1rem;/*espaçamento entre os itens flexiveis*/
+ box-shadow: 0 2px 20px rgba(0,0,0,2.0);/*sombra: eixo x eixo y desfoque a cor*/
+ position: sticky;/*grudar no topo ao rolar a pagina*/
+ top: 0;/*distancia do topo ao grudar*/
+ z-index: 1000;/*garante que fique acima dos outros elementos*/
+}
+header img{
+    height: 100px;/*fixando a altura da imagem em pixel*/
+    width: auto;/*ajusta a larura automaticamnte de acordo com a altura (mantem proporciornal a imagem)*/
+transition: transform 0.3s ease;/*transiçao suave de 3 segundos para animacao*/
+}
+header img:hover{/*hover= quando ´passar o mouse por cima, faz alguma coisa*/
+    transform: scale(1.05);/*aumenta 5% o tamanho da imagem*/
+
+}
